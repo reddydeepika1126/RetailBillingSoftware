@@ -1,8 +1,8 @@
-package in.bushansirgur.billingsoftware.controller;
+package in.billing.billingsoftware.controller;
 
-import in.bushansirgur.billingsoftware.io.DashboardResponse;
-import in.bushansirgur.billingsoftware.io.OrderResponse;
-import in.bushansirgur.billingsoftware.service.OrderService;
+import in.billing.billingsoftware.io.DashboardResponse;
+import in.billing.billingsoftware.io.OrderResponse;
+import in.billing.billingsoftware.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +14,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/dashboard")
 @RequiredArgsConstructor
-public class DashboardController {
+public class DashboardController
+{
 
     private final OrderService orderService;
 

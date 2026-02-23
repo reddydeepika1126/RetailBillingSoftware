@@ -1,4 +1,4 @@
-package in.bushansirgur.billingsoftware.service;
+package in.billing.billingsoftware.service;
 
 import org.springframework.web.multipart.MultipartFile;
 

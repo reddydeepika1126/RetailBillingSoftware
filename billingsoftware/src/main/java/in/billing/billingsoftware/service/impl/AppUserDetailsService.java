@@ -1,8 +1,8 @@
-package in.bushansirgur.billingsoftware.service.impl;
+package in.billing.billingsoftware.service.impl;
 
-import in.bushansirgur.billingsoftware.entity.UserEntity;
-import in.bushansirgur.billingsoftware.io.UserResponse;
-import in.bushansirgur.billingsoftware.repository.UserRepository;
+import in.billing.billingsoftware.entity.UserEntity;
+import in.billing.billingsoftware.io.UserResponse;
+import in.billing.billingsoftware.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;

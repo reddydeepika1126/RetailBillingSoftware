@@ -1,13 +1,13 @@
-package in.bushansirgur.billingsoftware.service.impl;
+package in.billing.billingsoftware.service.impl;
 
-import in.bushansirgur.billingsoftware.entity.CategoryEntity;
-import in.bushansirgur.billingsoftware.entity.ItemEntity;
-import in.bushansirgur.billingsoftware.io.ItemRequest;
-import in.bushansirgur.billingsoftware.io.ItemResponse;
-import in.bushansirgur.billingsoftware.repository.CategoryRepository;
-import in.bushansirgur.billingsoftware.repository.ItemRepository;
-import in.bushansirgur.billingsoftware.service.FileUploadService;
-import in.bushansirgur.billingsoftware.service.ItemService;
+import in.billing.billingsoftware.entity.CategoryEntity;
+import in.billing.billingsoftware.entity.ItemEntity;
+import in.billing.billingsoftware.io.ItemRequest;
+import in.billing.billingsoftware.io.ItemResponse;
+import in.billing.billingsoftware.repository.CategoryRepository;
+import in.billing.billingsoftware.repository.ItemRepository;
+import in.billing.billingsoftware.service.FileUploadService;
+import in.billing.billingsoftware.service.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
-package in.bushansirgur.billingsoftware.entity;
+package in.billing.billingsoftware.entity;
 
-import in.bushansirgur.billingsoftware.io.PaymentDetails;
-import in.bushansirgur.billingsoftware.io.PaymentMethod;
+import in.billing.billingsoftware.io.PaymentDetails;
+import in.billing.billingsoftware.io.PaymentMethod;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -32,7 +32,7 @@ public class OrderEntity {
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "order_id")
-    private List<OrderItemEntity> items = new ArrayList<>();
+    private List<in.billing.billingsoftware.entity.OrderItemEntity> items = new ArrayList<>();
 
     @Embedded
     private PaymentDetails paymentDetails;

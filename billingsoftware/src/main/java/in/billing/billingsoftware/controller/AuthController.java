@@ -1,10 +1,10 @@
-package in.bushansirgur.billingsoftware.controller;
+package in.billing.billingsoftware.controller;
 
-import in.bushansirgur.billingsoftware.io.AuthRequest;
-import in.bushansirgur.billingsoftware.io.AuthResponse;
-import in.bushansirgur.billingsoftware.service.UserService;
-import in.bushansirgur.billingsoftware.service.impl.AppUserDetailsService;
-import in.bushansirgur.billingsoftware.util.JwtUtil;
+import in.billing.billingsoftware.io.AuthRequest;
+import in.billing.billingsoftware.io.AuthResponse;
+import in.billing.billingsoftware.service.UserService;
+import in.billing.billingsoftware.service.impl.AppUserDetailsService;
+import in.billing.billingsoftware.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -22,7 +22,8 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-public class AuthController {
+public class AuthController
+{
 
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
@@ -33,7 +34,8 @@ public class AuthController {
 
 
     @PostMapping("/login")
-    public AuthResponse login(@RequestBody AuthRequest request) throws Exception {
+    public AuthResponse login(@RequestBody AuthRequest request) throws Exception
+    {
         authenticate(request.getEmail(), request.getPassword());
         final UserDetails userDetails = appUserDetailsService.loadUserByUsername(request.getEmail());
         final String jwtToken = jwtUtil.generateToken(userDetails);
@@ -42,7 +44,8 @@ public class AuthController {
     }
 
     private void authenticate(String email, String password) throws Exception {
-        try {
+        try
+        {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
         }catch (DisabledException e) {
             throw new Exception("User disabled");

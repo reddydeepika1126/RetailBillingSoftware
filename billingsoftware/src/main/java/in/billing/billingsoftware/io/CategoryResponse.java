@@ -1,4 +1,4 @@
-package in.bushansirgur.billingsoftware.io;
+package in.billing.billingsoftware.io;
 
 import lombok.Builder;
 import lombok.Data;
